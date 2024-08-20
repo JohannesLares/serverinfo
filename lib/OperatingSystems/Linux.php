@@ -194,7 +194,7 @@ class Linux implements IOperatingSystem {
 		$data = [];
 
 		try {
-			$disks = $this->executeCommand('df -TPk');
+			$disks = $this->executeCommand('df -TPka');
 		} catch (RuntimeException $e) {
 			return $data;
 		}
